@@ -10,6 +10,7 @@ This project, 100% Vibe Coding (Project: IT Documentation), was created purely f
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
 
 # Folder Structure
+'''
 ├── prisma/          # Schema dan migration
 ├── src/
 │   ├── pages/
@@ -21,6 +22,7 @@ This project, 100% Vibe Coding (Project: IT Documentation), was created purely f
 │   ├── styles/
 │   ├── scripts/
 └── README.md
+'''
 
 
 # Features
