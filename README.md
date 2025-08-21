@@ -27,6 +27,7 @@ This project, 100% Vibe Coding (Project: IT Documentation), was created purely f
 
 # Features
 ## Statistic (Progress)
-![alt text](https://github.com/Finnn16/IT_Documentation/blob/main/Master_Barang.png?raw=true)
+![alt text](https://github.com/Finnn16/IT_Documentation/blob/main/readme/Master_Barang.png?raw=true)
+Here I plan to make statistics of the total data, such as the total number of item records, the total items that come in and go out, and also the total expenses. All of this will be calculated per month to make it easier for analysis and evaluation of the IT department.
 
 
