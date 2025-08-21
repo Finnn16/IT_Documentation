@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/barang-masuk": "pages/barang-masuk.js",
+  "/barang-keluar": "pages/barang-keluar.js",
+  "/api/barang": "pages/api/barang.js",
+  "/api/supplier": "pages/api/supplier.js",
+  "/supplier": "pages/supplier.js",
+  "/log-transaksi": "pages/log-transaksi.js",
+  "/api/logs": "pages/api/logs.js"
+}

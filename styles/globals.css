@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced Hover Effects */
+@layer components {
+  /* Button hover enhancements */
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out transform;
+  }
+
+  .btn-primary:hover {
+    @apply bg-blue-700 shadow-lg scale-105 shadow-blue-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out transform;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-gray-600 shadow-lg scale-105 shadow-gray-200;
+  }
+
+  .btn-success {
+    @apply bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out transform;
+  }
+
+  .btn-success:hover {
+    @apply bg-green-700 shadow-lg scale-105 shadow-green-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out transform;
+  }
+
+  .btn-danger:hover {
+    @apply bg-red-700 shadow-lg scale-105 shadow-red-200;
+  }
+
+  /* Card hover enhancements */
+  .card-hover {
+    @apply transition-all duration-300 ease-in-out transform;
+  }
+
+  .card-hover:hover {
+    @apply scale-105 shadow-xl;
+  }
+
+  /* Input hover enhancements */
+  .input-enhanced {
+    @apply border border-gray-300 rounded-lg px-3 py-2 transition-all duration-200 ease-in-out;
+  }
+
+  .input-enhanced:hover {
+    @apply border-blue-400 shadow-md;
+  }
+
+  .input-enhanced:focus {
+    @apply border-blue-500 ring-2 ring-blue-200 shadow-md outline-none;
+  }
+
+  /* Select hover enhancements */
+  .select-enhanced {
+    @apply border border-gray-300 rounded-lg px-3 py-2 transition-all duration-200 ease-in-out;
+  }
+
+  .select-enhanced:hover {
+    @apply border-blue-400 shadow-md;
+  }
+
+  .select-enhanced:focus {
+    @apply border-blue-500 ring-2 ring-blue-200 shadow-md outline-none;
+  }
+
+  /* Table row hover enhancements */
+  .table-row-hover {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .table-row-hover:hover {
+    @apply shadow-lg transform translate-y-0.5;
+  }
+
+  /* Sidebar item hover enhancements */
+  .sidebar-item {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .sidebar-item:hover {
+    @apply transform translate-x-2 shadow-md;
+  }
+
+  /* Status-specific hover effects */
+  .status-critical:hover {
+    @apply bg-red-100 shadow-lg shadow-red-100;
+  }
+
+  .status-warning:hover {
+    @apply bg-yellow-100 shadow-lg shadow-yellow-100;
+  }
+
+  .status-safe:hover {
+    @apply bg-green-100 shadow-lg shadow-green-100;
+  }
+}
+
+/* Custom animations */
+@keyframes gentle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.pulse-gentle {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced shadow variations */
+.shadow-enhanced {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-enhanced:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

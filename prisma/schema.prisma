@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Supplier {
+  id            Int            @id @default(autoincrement())
+  nama          String
+  barangMasuk   BarangMasuk[]
+}
+
+model Barang {
+  id             Int             @id @default(autoincrement())
+  nama           String          @unique
+  qty            Int             @default(0)
+  stok_minimum  Int             @default(3)
+  kategori       KategoriBarang  @relation(fields: [kategoriId], references: [id])
+  kategoriId     Int
+  barangMasuk    BarangMasuk[]
+  barangKeluar   BarangKeluar[]
+  log            BarangLog[]
+}
+
+
+model BarangMasuk {
+  id           Int       @id @default(autoincrement())
+  barang       Barang    @relation(fields: [barangId], references: [id])
+  barangId     Int
+  supplier     Supplier  @relation(fields: [supplierId], references: [id])
+  supplierId   Int
+  pr_no        String
+  tanggal_pr   DateTime  @default(now())
+  gl_acc       String
+  cost_center  String    @default("HRD_TMSB")
+  requester    String
+  qty          Int
+  harga_satuan Decimal?  @default(0) @db.Decimal(15,2)
+  harga_total  Decimal?  @default(0) @db.Decimal(15,2)
+  ppn_11       Decimal?  @default(0) @db.Decimal(15,2)
+  total_dengan_ppn Decimal? @default(0) @db.Decimal(15,2)
+  remark       String?
+  created_at   DateTime  @default(now())
+}
+
+model BarangKeluar {
+  id             Int       @id @default(autoincrement())
+  barang         Barang    @relation(fields: [barangId], references: [id])
+  barangId       Int
+  tanggal        DateTime  @default(now())
+  qty            Int
+  status         Boolean   // 0 = sementara, 1 = pakai
+  keterangan     String?
+  kondisi_barang Boolean   // 0 = bekas, 1 = baru
+  created_at     DateTime  @default(now())
+}
+
+model BarangLog {
+  id         Int       @id @default(autoincrement())
+  barang     Barang    @relation(fields: [barangId], references: [id])
+  barangId   Int
+  jenis      String    // masuk / keluar
+  qty        Int
+  keterangan String?
+  tanggal    DateTime  @default(now())
+  created_at DateTime  @default(now())
+}
+
+model KategoriBarang {
+  id      Int      @id @default(autoincrement())
+  nama    String   @unique
+  barang  Barang[]
+}
