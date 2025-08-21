@@ -6,4 +6,24 @@ This project, 100% Vibe Coding (Project: IT Documentation), was created purely f
 
 # Tech Stack
 ![image]({https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white})
+![image]({https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white})
+![image]({https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white})
+
+# Folder Structure
+├── prisma/          # Schema dan migration
+├── src/
+│   ├── pages/
+        ├── pages.js
+        ├── api
+            ├── FolderApi
+               ├── index.js
+│   ├── components/
+│   ├── styles
+│   ├── scripts
+└── README.md
+
+# Features
+## Statistic (Progress)
+![alt text](https://github.com/Finnn16/IT_Documentation/blob/main/Master%20Barang.png?raw=true)
+
 
